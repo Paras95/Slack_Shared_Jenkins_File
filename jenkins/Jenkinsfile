@@ -7,12 +7,12 @@ pipeline{
         {
             steps
             {
-              withMaven(maven : 'apache-maven-3.6.3')
-              {
+              maven 'Maven-3.6.3'
+              
                   echo "building..."
                   sh 'mvn clean'
                   sh 'mvn package'
-              }
+              
 
             }
         }

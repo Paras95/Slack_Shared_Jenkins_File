@@ -7,7 +7,7 @@ pipeline{
         {
             steps
             {
-              maven 'Maven-3.6.3'
+              withMaven(maven : 'apache.maven-3.6.3')
               
                   echo "building..."
                   sh 'mvn clean'

@@ -8,10 +8,10 @@ pipeline{
             steps
             {
              echo "kartik beta mera hai"
-             withMaven(maven : 'apache.maven.3.6.3')
+             withMaven
              {
-                 sh 'mvn clean'
-                 sh 'mvn package'
+                 sh "mvn clean"
+                 sh "mvn package"
 
              }
 

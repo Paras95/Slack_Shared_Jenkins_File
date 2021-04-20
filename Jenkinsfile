@@ -8,13 +8,8 @@ pipeline{
             steps
             {
              echo "kartik beta mera hai"
-             withMaven
-             {
-                 sh "mvn clean"
-                 sh "mvn package"
-
-             }
-
+             sh 'mvn clean'
+             sh 'mvn package'            
             }
         }
     }

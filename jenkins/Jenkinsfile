@@ -7,12 +7,7 @@ pipeline{
         {
             steps
             {
-              withMaven(maven : 'apache.maven-3.6.3')
-              
-                  echo "building..."
-                  sh 'mvn clean'
-                  sh 'mvn package'
-              
+             echo "kartik beta mera hai"
 
             }
         }

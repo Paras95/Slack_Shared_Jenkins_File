@@ -4,7 +4,7 @@ pipeline{
 
   tools
   {
-    maven 'Maven 3.6.3'
+    maven 'apache-maven-3.6.3'
 
   }
     stages

@@ -1,6 +1,23 @@
 pipeline
 {
   agent none
+  options
+  {
+    buildDiscarder(logRotator(numToKeepStr: '4')) 
+  }
+
+  parameter
+  {
+
+      string(name: 'PERSON', defaultValue: 'Jenkins', description: 'Who should i say hello to')
+      text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+      booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+      choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+      password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+  }
 
     stages
     {
@@ -9,6 +26,7 @@ pipeline
           agent any
           steps{
               echo "In Non_Sequential"
+              echo "My Name is ${params.person}"
           }
 
       }
@@ -29,6 +47,7 @@ pipeline
                steps{
                 echo "In sequential 1"
                 sh 'printenv'
+                echo "In sequential 1 ${params.person}"
 
                }
            }
@@ -38,6 +57,7 @@ pipeline
                steps{
                 echo "In sequential 2"
                 sh 'printenv'
+                echo "In sequential 2 ${params.person}"
 
                }
            }
@@ -46,6 +66,7 @@ pipeline
            {
                steps{
                 echo "In sequential 3"
+                echo "In sequential 3 ${params.person}"
 
                }
            }
@@ -59,6 +80,7 @@ pipeline
                {
                    steps{
                       echo 'In parallel 1'
+                      echo "In parallel 1 ${params.person}"
 
                    }
                }
@@ -67,6 +89,7 @@ pipeline
                {
                    steps{
                       echo 'In parallel 2'
+                      echo "In parallel 2 ${params.person}"
 
                    }
                }

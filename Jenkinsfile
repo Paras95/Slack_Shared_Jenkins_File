@@ -6,7 +6,7 @@ pipeline
     buildDiscarder(logRotator(numToKeepStr: '4')) 
   }
 
-  parameter
+  parameters
   {
 
       string(name: 'PERSON', defaultValue: 'Jenkins', description: 'Who should i say hello to')

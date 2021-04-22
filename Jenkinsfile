@@ -57,7 +57,7 @@ pipeline
              parallel
              {
 
-               stage('Parallel in sequential')
+               stage('In Parallel 1')
                {
                    steps{
                       echo 'In parallel 1'
@@ -65,7 +65,7 @@ pipeline
                    }
                }
 
-               stage
+               stage('In Parallel 2')
                {
                    steps{
                       echo 'In parallel 2'

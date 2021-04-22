@@ -1,10 +1,9 @@
 pipeline
 {
   agent none
-  
+
   triggers {
-        cron('H */4 * * 1-5')
-        pollSCM('H */4 * * 1-5')
+        pollSCM('* * * * *')
     }
 
   options
@@ -29,6 +28,7 @@ pipeline
     {
       stage('Non_Sequential')
       {
+          
           agent any
           steps{
               echo "In Non_Sequential"

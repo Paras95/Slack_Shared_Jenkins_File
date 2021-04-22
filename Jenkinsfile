@@ -28,6 +28,11 @@ pipeline
     {
       stage('Non_Sequential')
       {
+          input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+          }
           
           agent any
           steps{

@@ -54,7 +54,7 @@ pipeline
            stage('Parallel in sequential')
            {
 
-             Parallel
+             parallel
              {
 
                stage

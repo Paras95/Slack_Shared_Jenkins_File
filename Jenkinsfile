@@ -6,9 +6,7 @@ pipeline
     {
       stage('Non_Sequential')
       {
-          agent{
-              label 'For Non_Sequential'
-          }
+          agent any
           steps{
               echo "In Non_Sequential"
           }
@@ -16,10 +14,7 @@ pipeline
       }
       stage('Sequential')
       {
-        agent{
-         label 'For Sequential'
-
-        }
+        agent any
         environment
         {
            For_Sequential = 'some_value'

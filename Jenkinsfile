@@ -26,7 +26,7 @@ pipeline
           agent any
           steps{
               echo "In Non_Sequential"
-              echo "My Name is ${params.person}"
+              echo "My Name is ${params.PERSON}"
           }
 
       }
@@ -47,7 +47,7 @@ pipeline
                steps{
                 echo "In sequential 1"
                 sh 'printenv'
-                echo "In sequential 1 ${params.person}"
+                echo "In sequential 1 ${params.PERSON}"
 
                }
            }
@@ -57,7 +57,7 @@ pipeline
                steps{
                 echo "In sequential 2"
                 sh 'printenv'
-                echo "In sequential 2 ${params.person}"
+                echo "In sequential 2 ${params.PERSON}"
 
                }
            }
@@ -66,7 +66,7 @@ pipeline
            {
                steps{
                 echo "In sequential 3"
-                echo "In sequential 3 ${params.person}"
+                echo "In sequential 3 ${params.PERSON}"
 
                }
            }
@@ -80,7 +80,7 @@ pipeline
                {
                    steps{
                       echo 'In parallel 1'
-                      echo "In parallel 1 ${params.person}"
+                      echo "In parallel 1 ${params.PERSON}"
 
                    }
                }
@@ -89,7 +89,7 @@ pipeline
                {
                    steps{
                       echo 'In parallel 2'
-                      echo "In parallel 2 ${params.person}"
+                      echo "In parallel 2 ${params.PERSON}"
 
                    }
                }

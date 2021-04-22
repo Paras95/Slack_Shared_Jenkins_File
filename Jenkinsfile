@@ -18,6 +18,7 @@ pipeline
         environment
         {
            For_Sequential = 'some_value'
+           My_Password = credentials('21')
 
         }
 

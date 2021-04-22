@@ -27,6 +27,7 @@ pipeline
            {
                steps{
                 echo "In sequential 1"
+                sh 'printenv'
 
                }
            }
@@ -35,6 +36,7 @@ pipeline
            {
                steps{
                 echo "In sequential 2"
+                sh 'printenv'
 
                }
            }

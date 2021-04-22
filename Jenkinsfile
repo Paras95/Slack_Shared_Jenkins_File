@@ -33,6 +33,7 @@ pipeline
           steps{
               echo "In Non_Sequential"
               echo "My Name is ${params.PERSON}"
+              echo "checking triggers in non sequential"
           }
 
       }

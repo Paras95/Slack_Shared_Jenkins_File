@@ -29,12 +29,12 @@ pipeline
            My_Password = credentials('6ad7401e-6579-4543-b948-ff2bd52cb366')
 
         }
-
-        when { environment name: 'For_Sequential', value: 'some_value' }
       
 
     stages
     {
+      when { environment name: 'For_Sequential', value: 'some_value' }
+
       stage('Non_Sequential')
       {
           input {

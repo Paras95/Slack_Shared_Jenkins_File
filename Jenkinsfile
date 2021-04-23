@@ -36,8 +36,8 @@ pipeline
 
       stage('Non_Sequential')
       {
-        when { environment name: 'For_Sequential', value: 'some_value' }
-        
+        when { environment name: 'For_Sequential', value: 'some_val' }
+
           input {
                 message "Should we continue?"
                 ok "Yes, we should."

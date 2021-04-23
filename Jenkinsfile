@@ -2,9 +2,9 @@ pipeline
 {
   agent none
 
-  triggers {
+  /*triggers {
         pollSCM('* * * * *')
-    }
+    }*/
 
   options
   {

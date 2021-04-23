@@ -33,11 +33,6 @@ pipeline
 
     stages
     {
-      input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-          }
 
       stage('Non_Sequential')
       {

@@ -29,14 +29,17 @@ pipeline
            My_Password = credentials('6ad7401e-6579-4543-b948-ff2bd52cb366')
 
         }
-      
+      tools
+      {
+      maven 'maven'
+      }
 
     stages
     {
 
       stage('Non_Sequential')
       {
-        when { environment name: 'For_Sequential', value: 'some_val' }
+        when { environment name: 'For_Sequential', value: 'some_value' }
 
           input {
                 message "Should we continue?"
@@ -46,6 +49,7 @@ pipeline
           
           agent any
           steps{
+               sh 'mvn clean install'
               echo "In Non_Sequential"
               echo "My Name is ${params.PERSON}"
               

@@ -1,10 +1,6 @@
 pipeline
 {
-  agent {
-    docker {
-        image 'bibinwilson/jenkins-slave:latest'
-    }
-}
+  agent {label 'docker-agent-slave' }
 
   /*triggers {
         pollSCM('* * * * *')

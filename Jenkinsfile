@@ -3,7 +3,6 @@ pipeline
   agent {
     docker {
         image 'bibinwilson/jenkins-slave:latest'
-        label 'my-defined-label'
     }
 }
 

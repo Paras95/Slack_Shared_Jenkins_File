@@ -1,6 +1,6 @@
 pipeline
 {
-  agent none
+  agent bibinwilson/jenkins-slave:latest
 
   /*triggers {
         pollSCM('* * * * *')

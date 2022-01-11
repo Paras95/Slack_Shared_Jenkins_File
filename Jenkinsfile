@@ -1,6 +1,6 @@
 pipeline
 {
-  agent {label 'docker-agent-slave' }
+  agent any
 
   /*triggers {
         pollSCM('* * * * *')

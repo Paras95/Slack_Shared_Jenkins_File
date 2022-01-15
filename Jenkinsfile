@@ -1,6 +1,8 @@
 library 'utils@main'
 pipeline{
   agent any
+  tools
+  {maven 'maven'}
   stages{
     stage('lib_from_vars'){
       steps{

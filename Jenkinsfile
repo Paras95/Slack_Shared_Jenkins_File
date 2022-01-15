@@ -1,4 +1,4 @@
-library 'utils@main'
+library 'utils'
 pipeline{
   agent any
   tools
@@ -6,9 +6,6 @@ pipeline{
   stages{
     stage('lib_from_vars'){
       steps{
-        sh 'mvn test'
-        archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-        echo "completed from jenkins file"
         script{
             paras()
             paras.beta()

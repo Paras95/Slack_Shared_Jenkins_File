@@ -7,7 +7,7 @@ pipeline{
     stage('lib_from_vars'){
       steps{
         sh 'mvn test'
-        //archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+        archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
         echo "completed from jenkins file"
         script{
             paras()

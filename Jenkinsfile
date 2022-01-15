@@ -6,6 +6,8 @@ pipeline{
   stages{
     stage('lib_from_vars'){
       steps{
+        sh 'mvn clean install'
+        echo "completed from jenkins file"
         script{
             paras()
             paras.beta()

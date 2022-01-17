@@ -9,7 +9,7 @@ pipeline{
         script{
             paras()
             paras.beta()
-            paras.class1()
+            paras.class1('target/surefire-reports/TEST-com.mycompany.app.AppTest.xml')
             //paras.unique('kartik')
         }
       }
